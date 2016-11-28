@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Index">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-controller="MainCtrl">
+<div>
+<ul class="nav">
+    <li ng-repeat="category in categories" ng-class="{'active':isCurrentCategory(category)}">
+        <a href="#" ng-click="setCurrentCategory(category)">{{category.name}}</a>
+    </li>
+</ul>
+    </div>
+<div ng-repeat="bookmark in bookmarks | filter:{category:currentCategory.name}">
+    <a href="#">{{bookmark.title}}</a>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+<script src="index-app.start.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+</body>
+</html>
