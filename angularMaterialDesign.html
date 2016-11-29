@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.js"/>
+</head>
+<body ng-app="MyApp">
+
+<div layout="column" layout-fill>
+    <md-toolbar>
+
+        <div class="md-toolbar-tools">
+            <span>My App's Title</span>
+
+            <!-- fill up the space between left and right area -->
+            <span flex></span>
+
+            <md-button>
+                Right Bar Button
+            </md-button>
+        </div>
+
+    </md-toolbar>
+    <md-content>
+        Hello!
+    </md-content>
+</div>
+
+<div class="container" layout="row" flex>
+<md-sidenav md-is-locked-open="true" class="plum">Sidenav</md-sidenav>
+<md-content id="content" class="lightblue" flex>content</md-content>
+</div>
+
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-animate/angular-animate.js"></script>
+<script src="node_modules/angular-aria/angular-aria.js"></script>
+<script src="node_modules/angular-material/angular-material.js"></script>
+<script>
+    angular.module('MyApp',['ngMaterial']).run(function () {
+        console.log("My app is ready!");
+
+    });
+</script>
+<style>
+    .red{background-color: red;}
+    .lightblue{background-color: lightblue;}
+    .plum{background-color: plum;}
+</style>
+</body>
+</html>
