@@ -3,10 +3,10 @@
 <head>
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css"/>
     <link rel="stylesheet" href="app.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
 </head>
 <body ng-app="MyApp" layout="column" ng-controller="UserController as ul">
-
-
 <md-toolbar>
         <h1>Angular Material Design</h1>
     </md-toolbar>
@@ -24,10 +24,15 @@
 </md-sidenav>
 <md-content id="content" flex>
     <md-icon md-svg-src="{{ul.selected.avatar}}" class="avatar"></md-icon>
+    <md-button class="share"  ng-click="ul.share(ul.selected)">
+        <i class="material-icons">reply</i>
+    </md-button>
+
     <h2>{{ul.seleted.name}}</h2>
     <p>
         {{ul.selected.content}}
     </p>
+
 </md-content>
 </div>
 
@@ -39,10 +44,8 @@
 <script src="UserService.js"></script>
 <script src="UserController.js"></script>
 <script>
-    angular.module('MyApp',['users']).run(function () {
-        console.log("Myapp is ready!");
+    angular.module('MyApp',['ngMaterial', 'users']);
 
-    });
 </script>
     <a href="https://icons8.com/web-app/36840/Parrot">for more icons</a>
     <div>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>

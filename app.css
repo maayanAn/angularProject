@@ -39,3 +39,14 @@ md-list-item > button{
 
 }
 
+.icons_names{
+    padding-left: 8px;
+    text-align: center;
+}
+
+.share{
+    float: right;
+    padding-top: 10px;
+    margin-top: 30px;
+}
+
